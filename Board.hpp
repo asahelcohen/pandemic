@@ -1,4 +1,5 @@
-#include "Player.hpp"
+#ifndef BOARD_H
+#define BOARD_H
 #include "Color.hpp"
 #include "City.hpp"
 #include <string>
@@ -16,8 +17,10 @@ namespace pandemic
     {
         static map<City, set<City>> cityMap;
         static map<City, Color> cityColor;
+        static map<City, int> cityNum;
         static map<City, Color> cityCards;
-
+        static map<City, bool> cityResearch;
+        static map<Color, bool> DiscoveredCures;
 
     public:
         Board();
@@ -33,3 +36,5 @@ namespace pandemic
         ~Board(){};
     };
 }
+
+#endif

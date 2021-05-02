@@ -1,34 +1,32 @@
-#include "Researcher.hpp"
-#include "Virologist.hpp"
-#include "FieldDoctor.hpp"
-#include "Dispatcher.hpp"
-#include "Scientist.hpp"
-#include "Scientist.hpp"
-#include "GeneSplicer.hpp"
-#include "Medic.hpp"
-#include "OperationsExpert.hpp"
-#include "City.hpp"
+#ifndef PLAYER_H
+#define PLAYER_H
 
+#include "string"
+#include "Board.hpp"
+using namespace std;
 
-// drive();
-// fly_direct();
-// fly_charter();
-// fly_shuttle();
-// build();
-// discover_cure);
-// treat();
+namespace pandemic
+{
+    class Player
+    {
+    protected:
+        City location;
+        Board gameBoard;
+        set<City> cards;
 
-// role();
-// take_card();
+    public:
+        Player(Board &, City);
+        Player &drive(City);
+        Player &fly_direct(City);
+        Player &fly_charter(City);
+        Player &fly_shuttle(City);
 
+        Player &build();
+        Player &discover_cure();
+        Player &treat();
 
-
-namespace pandemic{
-    class Player{
-        private:
-            City Location;
-
-
+        string role();
+        Player take_card(City);
     };
-
 }
+#endif

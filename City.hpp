@@ -1,3 +1,5 @@
+#ifndef CITY_H
+#define CITY_H
 namespace pandemic
 {
     enum class City
@@ -53,3 +55,4 @@ namespace pandemic
     };
 
 }
+#endif
