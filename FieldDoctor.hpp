@@ -6,6 +6,7 @@
 
 namespace pandemic{
     class FieldDoctor : public Player{
+        using Player::Player;
         Player &treat();
 
     };

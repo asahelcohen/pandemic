@@ -6,6 +6,7 @@
 
 namespace pandemic{
     class Scientist : public Player{
+        using Player::Player;
         Player &discover_cure();
     };
 

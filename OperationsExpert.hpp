@@ -4,9 +4,13 @@
 // build(); //without throwing card
 #include "Player.hpp"
 
-namespace pandemic{
-    class OperationsExpert : public Player{
-        Player &build();
+namespace pandemic
+{
+    class OperationsExpert : public Player
+    {
+    public:
+        using Player::Player;
+        OperationsExpert &build();
     };
 
 }

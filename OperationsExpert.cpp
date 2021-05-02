@@ -1,4 +1,8 @@
 #include "OperationsExpert.hpp"
-namespace pandemic{
-
+namespace pandemic
+{
+    Player &Player::build()
+    {
+        return *this;
+    }
 };

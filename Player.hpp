@@ -22,8 +22,8 @@ namespace pandemic
         Player &fly_shuttle(City);
 
         Player &build();
-        Player &discover_cure();
-        Player &treat();
+        Player &discover_cure(Color);
+        Player &treat(City);
 
         string role();
         Player take_card(City);

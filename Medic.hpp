@@ -6,6 +6,7 @@
 
 namespace pandemic{
     class Medic : public Player{
+        using Player::Player;
         Player &treat();
 
     };

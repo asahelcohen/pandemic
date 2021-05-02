@@ -3,23 +3,23 @@
 
 namespace pandemic
 {
-    Player::Player(Board &d, City startCity) : gameBoard(d), location(startCity){}
+    Player::Player(Board &b, City startCity) : gameBoard(b), location(startCity){}
     City &location(City);
     // cards
 
-    Player &Player::drive(City)
+    Player &Player::drive(City c)
     {
         return *this;
     }
-    Player &Player::fly_direct(City)
+    Player &Player::fly_direct(City c)
     {
         return *this;
     }
-    Player &Player::fly_charter(City)
+    Player &Player::fly_charter(City c)
     {
         return *this;
     }
-    Player &Player::fly_shuttle(City)
+    Player &Player::fly_shuttle(City c)
     {
         return *this;
     }
@@ -28,11 +28,11 @@ namespace pandemic
     {
         return *this;
     }
-    Player &Player::discover_cure()
+    Player &Player::discover_cure(Color c)
     {
         return *this;
     }
-    Player &Player::treat()
+    Player &Player::treat(City c)
     {
         return *this;
     }

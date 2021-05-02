@@ -6,6 +6,7 @@
 
 namespace pandemic{
     class GeneSplicer : public Player{
+        using Player::Player;
         Player &discover_cure();
     };
 
