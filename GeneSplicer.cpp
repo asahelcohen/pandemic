@@ -2,7 +2,7 @@
 
 namespace pandemic
 {
-    Player &Player::discover_cure()
+    GeneSplicer &GeneSplicer::discover_cure(Color c)
     {
         return *this;
     }

@@ -4,10 +4,13 @@
 // discover_cure(); // can discover_cure by using any five card, they dont have to be the same colour of the disease
 #include "Player.hpp"
 
-namespace pandemic{
-    class GeneSplicer : public Player{
+namespace pandemic
+{
+    class GeneSplicer : public Player
+    {
+    public:
         using Player::Player;
-        Player &discover_cure();
+        GeneSplicer &discover_cure(Color);
     };
 
 }

@@ -1,7 +1,7 @@
 #ifndef OPERATIONSEXPERT_H
 #define OPERATIONSEXPERT_H
 
-// build(); //without throwing card
+// build(); //without throwing card 
 #include "Player.hpp"
 
 namespace pandemic
@@ -10,7 +10,7 @@ namespace pandemic
     {
     public:
         using Player::Player;
-        OperationsExpert &build();
+        OperationsExpert &build(City);
     };
 
 }

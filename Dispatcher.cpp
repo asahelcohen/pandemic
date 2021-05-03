@@ -2,7 +2,7 @@
 
 namespace pandemic
 {
-    Player &Player::fly_direct()
+    Dispatcher &Dispatcher::fly_direct(City c)
     {
         return *this;
     }

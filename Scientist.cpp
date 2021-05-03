@@ -2,7 +2,7 @@
 
 namespace pandemic
 {
-    Player &Player::discover_cure()
+    Scientist &Scientist::discover_cure(Color c)
     {
         return *this;
     }

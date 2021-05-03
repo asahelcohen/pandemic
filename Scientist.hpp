@@ -4,10 +4,13 @@
 // discover_cure(); //  can discover cure by using any n card(the rest need 5)
 #include "Player.hpp"
 
-namespace pandemic{
-    class Scientist : public Player{
+namespace pandemic
+{
+    class Scientist : public Player
+    {
+    public:
         using Player::Player;
-        Player &discover_cure();
+        Scientist &discover_cure(Color);
     };
 
 }

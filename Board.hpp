@@ -15,6 +15,7 @@ namespace pandemic
 {
     class Board
     {
+    public:
         static map<City, set<City>> cityMap;
         static map<City, Color> cityColor;
         static map<City, int> cityNum;
@@ -22,7 +23,6 @@ namespace pandemic
         static map<City, bool> cityResearch;
         static map<Color, bool> DiscoveredCures;
 
-    public:
         Board();
 
         int &operator[](City city);

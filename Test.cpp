@@ -19,7 +19,7 @@ using namespace std;
 
 Board board; // Initialize an empty board (with 0 disease cubes in any city).
 
-TEST_CASE("Initialize a board ")
+TEST_CASE("create a board ")
 {
     CHECK(board.is_clean() == true);
     board[City::Kinshasa] = 3;      // put 3 yellow disease cubes in Kinshasa.
@@ -29,6 +29,7 @@ TEST_CASE("Initialize a board ")
     board[City::Chicago] = 1;       // put 1 blue disease cube in Chicago
     board[City::Bogota] = 1;        // put 1 blue disease cube in Bogota
     board[City::Delhi] = 2;         // put 2 black disease cube in Delhi
+	board[City::Atlanta] = 2;         // put 2 black disease cube in Delhi
     CHECK(board.is_clean() == false);
 }
 
@@ -47,49 +48,48 @@ TEST_CASE("create players")
 TEST_CASE("OperationsExpert")
 {
     OperationsExpert player{board, City::Atlanta};
-    player.build(); //build in atlanta
+	player.take_card(City::Atlanta);
+	player.build(City::Atlanta); //build in atlanta, but dont take card
+	player.treat(City::Atlanta);
+	CHECK(board[City::Atlanta] == 1);
 }
 
 TEST_CASE("Dispatcher")
 {
-    Dispatcher player{board, City::Atlanta};
-    player.build(); //build in atlanta
+    Dispatcher player{board, City::HoChiMinhCity};
+	player.take_card(City::HoChiMinhCity);
+	player.build(City::HoChiMinhCity);
+    player.fly_direct(City::SanFrancisco);
 }
 
 TEST_CASE("FieldDoctor")
 {
     FieldDoctor player{board, City::Atlanta};
-    player.build(); //build in atlanta
 }
 
 TEST_CASE("GeneSplicer")
 {
     GeneSplicer player{board, City::Atlanta};
-    player.build(); //build in atlanta
 }
 
 TEST_CASE("Medic")
 {
     Medic player{board, City::Atlanta};
-    player.build(); //build in atlanta
 }
 
 TEST_CASE("Researcher")
 {
     Researcher player{board, City::Atlanta};
-    player.build(); //build in atlanta
 }
 
 TEST_CASE("Virologist")
 {
     Virologist player{board, City::Atlanta};
-    player.build(); //build in atlanta
 }
 
 TEST_CASE("Scientist")
 {
     Scientist player{board, City::Atlanta};
-    player.build(); //build in atlanta
 }
 
 
@@ -99,7 +99,6 @@ TEST_CASE("Scientist")
     //     .take_card(City::BuenosAires)
     //     .take_card(City::HoChiMinhCity);
 
-    // CHECK_NOTHROW(player.build(););
     // CHECK_NOTHROW(player.drive(City::Chicago););
     // CHECK_NOTHROW(player.fly_direct(City::HoChiMinhCity));
     // CHECK_THROWS(player.fly_direct(City::HoChiMinhCity));

@@ -2,7 +2,7 @@
 
 namespace pandemic
 {
-    Player &Player::treat()
+    Virologist &Virologist::treat(City c)
     {
         return *this;
     }

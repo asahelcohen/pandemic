@@ -7,9 +7,9 @@ namespace pandemic
 {
     class Dispatcher : public Player
     {
-        public:
+    public:
         using Player::Player;
-        Player &fly_direct();
+        Dispatcher &fly_direct(City);
     };
 }
 #endif

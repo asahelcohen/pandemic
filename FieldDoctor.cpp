@@ -1,7 +1,7 @@
 #include "FieldDoctor.hpp"
 namespace pandemic
 {
-    Player &Player::treat()
+    FieldDoctor &FieldDoctor::treat(City c)
     {
         return *this;
     }

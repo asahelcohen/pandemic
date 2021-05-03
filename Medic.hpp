@@ -4,11 +4,13 @@
 // treat(); //when using treat removes all cubes of desease and not only one
 #include "Player.hpp"
 
-namespace pandemic{
-    class Medic : public Player{
+namespace pandemic
+{
+    class Medic : public Player
+    {
+    public:
         using Player::Player;
-        Player &treat();
-
+        Medic &treat(City);
     };
 
 }

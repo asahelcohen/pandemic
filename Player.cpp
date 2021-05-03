@@ -24,7 +24,7 @@ namespace pandemic
         return *this;
     }
 
-    Player &Player::build()
+    Player &Player::build(City c)
     {
         return *this;
     }

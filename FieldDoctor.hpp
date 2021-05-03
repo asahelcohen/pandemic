@@ -4,11 +4,13 @@
 // treat(); //can treat any city connected to him without using city card
 #include "Player.hpp"
 
-namespace pandemic{
-    class FieldDoctor : public Player{
+namespace pandemic
+{
+    class FieldDoctor : public Player
+    {
+    public:
         using Player::Player;
-        Player &treat();
-
+        FieldDoctor &treat(City);
     };
 
 }
