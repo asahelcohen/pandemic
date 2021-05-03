@@ -13,6 +13,7 @@ namespace pandemic
         // using Player::Player;
         Scientist(Board, City, unsigned int);
         Scientist &discover_cure(Color);
+        std::string role();
     };
 
 }

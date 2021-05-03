@@ -5,4 +5,9 @@ namespace pandemic
     {
         return *this;
     }
+
+    string OperationsExpert::role()
+    {
+        return "OperationsExpert";
+    }
 };

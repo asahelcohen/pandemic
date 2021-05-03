@@ -11,6 +11,7 @@ namespace pandemic
     public:
         using Player::Player;
         Virologist &treat(City);
+        std::string role();
     };
 
 }

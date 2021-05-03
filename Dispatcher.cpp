@@ -7,4 +7,8 @@ namespace pandemic
         return *this;
     }
 
+    string Dispatcher::role()
+    {
+        return "Dispatcher";
+    }
 };

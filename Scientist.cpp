@@ -11,4 +11,9 @@ namespace pandemic
     {
         return *this;
     }
+
+    string Scientist::role()
+    {
+        return "Scientist";
+    }
 };

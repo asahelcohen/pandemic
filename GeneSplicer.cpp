@@ -6,4 +6,9 @@ namespace pandemic
     {
         return *this;
     }
+
+    string GeneSplicer::role()
+    {
+        return "GeneSplicer";
+    }
 };

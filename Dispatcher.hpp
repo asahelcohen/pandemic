@@ -10,6 +10,7 @@ namespace pandemic
     public:
         using Player::Player;
         Dispatcher &fly_direct(City);
+        std::string role();
     };
 }
 #endif

@@ -11,6 +11,7 @@ namespace pandemic
     public:
         using Player::Player;
         Medic &treat(City);
+        std::string role();
     };
 
 }

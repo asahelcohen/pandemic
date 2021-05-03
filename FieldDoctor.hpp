@@ -11,6 +11,7 @@ namespace pandemic
     public:
         using Player::Player;
         FieldDoctor &treat(City);
+        std::string role();
     };
 
 }

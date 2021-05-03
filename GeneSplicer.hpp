@@ -11,6 +11,7 @@ namespace pandemic
     public:
         using Player::Player;
         GeneSplicer &discover_cure(Color);
+        std::string role();
     };
 
 }

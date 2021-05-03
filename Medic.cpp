@@ -6,4 +6,9 @@ namespace pandemic
     {
         return *this;
     }
+
+    string Medic::role()
+    {
+        return "Medic";
+    }
 };

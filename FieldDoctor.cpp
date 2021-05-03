@@ -5,4 +5,9 @@ namespace pandemic
     {
         return *this;
     }
+
+    string FieldDoctor::role()
+    {
+        return "FieldDoctor";
+    }
 };

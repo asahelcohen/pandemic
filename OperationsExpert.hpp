@@ -11,7 +11,8 @@ namespace pandemic
     public:
         using Player::Player;
         OperationsExpert &build();
-    };
+        std::string role();
 
+    };
 }
 #endif
