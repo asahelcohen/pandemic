@@ -10,7 +10,7 @@ namespace pandemic
     {
     public:
         using Player::Player;
-        OperationsExpert &build(City);
+        OperationsExpert &build();
     };
 
 }

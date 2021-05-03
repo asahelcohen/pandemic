@@ -10,18 +10,19 @@ namespace pandemic
     class Player
     {
     protected:
+        
+
+    public:
         City location;
         Board gameBoard;
         set<City> cards;
-
-    public:
         Player(Board &, City);
         Player &drive(City);
         Player &fly_direct(City);
         Player &fly_charter(City);
         Player &fly_shuttle(City);
 
-        Player &build(City);
+        Player &build();
         Player &discover_cure(Color);
         Player &treat(City);
 

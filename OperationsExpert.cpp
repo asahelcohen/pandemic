@@ -1,7 +1,7 @@
 #include "OperationsExpert.hpp"
 namespace pandemic
 {
-    OperationsExpert &OperationsExpert::build(City c)
+    OperationsExpert &OperationsExpert::build()
     {
         return *this;
     }

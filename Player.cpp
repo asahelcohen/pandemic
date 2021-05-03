@@ -6,7 +6,7 @@ namespace pandemic
     Player::Player(Board &b, City startCity) : gameBoard(b), location(startCity){}
     City &location(City);
     // cards
-
+    
     Player &Player::drive(City c)
     {
         return *this;
@@ -24,7 +24,7 @@ namespace pandemic
         return *this;
     }
 
-    Player &Player::build(City c)
+    Player &Player::build()
     {
         return *this;
     }

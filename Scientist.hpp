@@ -8,8 +8,10 @@ namespace pandemic
 {
     class Scientist : public Player
     {
+        unsigned int n;
     public:
-        using Player::Player;
+        // using Player::Player;
+        Scientist(Board, City, unsigned int);
         Scientist &discover_cure(Color);
     };
 
