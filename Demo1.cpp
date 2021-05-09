@@ -82,8 +82,8 @@ int main() {
 
 	/* fly_charter action */
 
-	player.drive(City::Khartoum)
-	 .fly_charter(City::Sydney);  // legal action: you discard the Khartoum card and fly to Sydney.
+	player.drive(City::Khartoum);
+	 player.fly_charter(City::Sydney);  // legal action: you discard the Khartoum card and fly to Sydney.
 
 	try {
 		player.fly_charter(City::Seoul);  // illegal action: you do not have the Sydney card (the card of the city you are in).

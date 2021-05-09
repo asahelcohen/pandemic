@@ -17,6 +17,15 @@ namespace pandemic
 
     bool Board::is_clean()
     {
+        std::map<City, int>::iterator it;
+        it = cityNum.begin();
+        while (it != cityNum.end())
+        {
+            if ((it->second) > 0)
+            {
+                return false;
+            }
+        }
         return true;
     }
 
@@ -27,20 +36,35 @@ namespace pandemic
 
     const int Board::operator[](City c) const
     {
-
-        return 1;
+        const int i = cityNum.at(c);
+        return i;
     }
 
     ostream &operator<<(ostream &os, const Board &b)
     {
+        // std::map<City, int>::iterator it;
+        // it = b.cityNum.begin();
+        // while (it != cityNum.end())
+        // {
+        //     if ((it->second) > 0)
+        //     {
+        //         return false;
+        //     }
+        // }
+        // for (std::map<City, int> it = b.cityNum.begin(); it != b.cityNum.end(); ++it)
+        // {
+        //     os << it->first << "[" << it->second << "]\n";
+        // }
         return os;
     }
 
-    void Board::remove_cures(){
+    void Board::remove_cures()
+    {
         DiscoveredCures.clear();
     }
 
-    void Board::remove_stations(){
+    void Board::remove_stations()
+    {
         cityResearch.clear();
     }
 }

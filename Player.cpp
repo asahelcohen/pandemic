@@ -105,8 +105,6 @@ namespace pandemic
     Player &Player::discover_cure(Color c)
     {
         if (gameBoard.cityResearch.at(location) == true)
-            return *this;
-        else
         {
             set<City> temp;
             int counter = 0;
@@ -134,21 +132,24 @@ namespace pandemic
                     }
                 }
             }
+            throw runtime_error("you need five cards of the color to discover cure");
         }
-        throw runtime_error("you need five cards of the color to discover cure");
+        else{
+            throw runtime_error("there is no research center here");
+        }
     }
 
     Player &Player::treat(City c)
     {
-        if(gameBoard.cityNum.at(c) == 0){
+        if(gameBoard.cityNum.at(location) == 0){
             throw runtime_error("there is nobody to treat here!");
         }
         Color temp = gameBoard.cityColor.at(location);
         if(gameBoard.DiscoveredCures.at(temp) == true){
-            gameBoard.cityNum.at(c) = 0;
+            gameBoard.cityNum.at(location) = 0;
         }
         else{
-            gameBoard.cityNum.at(c) -= 1;
+            gameBoard.cityNum.at(location) -= 1;
         }
         return *this;
     }
