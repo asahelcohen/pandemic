@@ -28,6 +28,7 @@ namespace pandemic
 
         string role();
         Player take_card(City);
+        void remove_cards();
     };
 }
 #endif

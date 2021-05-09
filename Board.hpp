@@ -18,10 +18,9 @@ namespace pandemic
     public:
         static map<City, set<City>> cityMap;
         static map<City, Color> cityColor;
-        static map<City, int> cityNum;
-        static map<City, Color> cityCards;
-        static map<City, bool> cityResearch;
-        static map<Color, bool> DiscoveredCures;
+        map<City, int> cityNum;
+        map<City, bool> cityResearch;
+        map<Color, bool> DiscoveredCures;
 
         Board();
 
@@ -31,7 +30,8 @@ namespace pandemic
         friend ostream& operator << (ostream &os, const Board &unit);
 
         bool is_clean();
-
+        void remove_cures();
+        void remove_stations();
 
         ~Board(){};
     };
