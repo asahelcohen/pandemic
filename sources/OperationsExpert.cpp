@@ -3,15 +3,11 @@ namespace pandemic
 {
     OperationsExpert &OperationsExpert::build()
     {
-        if (gameBoard.cityResearch.at(location) == true)
+        if (gameBoard.cityResearch.at(location))
         {
             return *this;
         }
-        else
-        {
-            gameBoard.cityResearch.at(location) = true;
-        }
-
+        gameBoard.cityResearch.at(location) = true;
         return *this;
     }
 

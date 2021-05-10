@@ -8,10 +8,10 @@ namespace pandemic
 {
     class Scientist : public Player
     {
-        unsigned int n;
+        int n;
     public:
-        // using Player::Player;
-        Scientist(Board, City, unsigned int);
+        //using Player::Player;
+        Scientist(Board&, City, int);
         Scientist &discover_cure(Color);
         std::string role();
     };

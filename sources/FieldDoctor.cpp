@@ -1,4 +1,5 @@
 #include "FieldDoctor.hpp"
+
 namespace pandemic
 {
     FieldDoctor &FieldDoctor::treat(City c)
@@ -7,10 +8,10 @@ namespace pandemic
         {
             throw runtime_error("there is nobody to treat here!");
         }
-        if (gameBoard.cityMap.at(location).find(c) != gameBoard.cityMap.at(location).end())
+        if (pandemic::Board::cityMap.at(location).find(c) != pandemic::Board::cityMap.at(location).end())
         {
-            Color temp = gameBoard.cityColor.at(location);
-            if (gameBoard.DiscoveredCures.at(temp) == true)
+            Color temp = pandemic::Board::cityColor.at(location);
+            if (gameBoard.DiscoveredCures.at(temp))
             {
                 gameBoard.cityNum.at(c) = 0;
             }

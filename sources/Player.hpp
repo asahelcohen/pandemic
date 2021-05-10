@@ -25,8 +25,8 @@ namespace pandemic
         virtual Player &discover_cure(Color);
         virtual Player &treat(City);
 
-        string role();
-        Player take_card(City);
+        virtual string role();
+        virtual Player &take_card(City);
         void remove_cards();
     };
 }
