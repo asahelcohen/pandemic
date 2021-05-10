@@ -55,7 +55,7 @@ namespace pandemic
         if (cards.find(location) != cards.end())
         {
             location = c;
-            cards.erase(c);
+            cards.erase(location);
         }
         else
         {

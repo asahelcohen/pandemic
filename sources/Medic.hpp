@@ -11,6 +11,10 @@ namespace pandemic
     public:
         using Player::Player;
         Medic &treat(City);
+        Medic &drive(City);
+        Medic &fly_direct(City);
+        Medic &fly_charter(City);
+        Medic &fly_shuttle(City);
         std::string role();
     };
 

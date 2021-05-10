@@ -496,7 +496,6 @@ void medic_auto_heal_test(Board& board) {
 		if (auto_heal_cities.count(city.second.color)!=0) {
 			Dispatcher p{b, city.first};
 			/* should throw an error (presence of the medic already set the disease to 0) */
-			cout << city.second.city << endl;
 			CHECK_THROWS(p.treat(city.first));
 		}
 	}

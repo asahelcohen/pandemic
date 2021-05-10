@@ -10,14 +10,13 @@ namespace pandemic
         }
         if (cards.find(c) != cards.end())
         {
-            Color temp = pandemic::Board::cityColor.at(c);
-            if (gameBoard.DiscoveredCures.at(temp))
+            if (gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(c)))
             {
-                gameBoard.cityNum.at(location) = 0;
+                gameBoard.cityNum.at(c) = 0;
             }
             else
             {
-                gameBoard.cityNum.at(location) -= 1;
+                gameBoard.cityNum.at(c) -= 1;
             }
             cards.erase(c);
         }

@@ -15,16 +15,15 @@ namespace pandemic
             {
                 set<City> tempN;
                 int counter = 0;
-                std::set<pandemic::City>::iterator it = cards.begin();
-                while (it != cards.end())
+                std::set<pandemic::City>::iterator it = cards.cbegin();
+                while (it != cards.cend())
                 {
                     if (pandemic::Board::cityColor.at(*it) == c)
                     {
                         counter++;
                         tempN.insert(*it);
-                        if (counter == n)
+                        if (counter >= n)
                         {
-                            
                             gameBoard.DiscoveredCures.at(c) = true;
                             std::set<City>::iterator it1 = tempN.cbegin();
                             while (it1 != tempN.cend())

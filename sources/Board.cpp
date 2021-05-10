@@ -66,14 +66,14 @@ namespace pandemic
 
     bool Board::is_clean()
     {
-        std::map<City, int>::iterator it;
-        it = cityNum.begin();
+        std::map<City, int>::iterator it = cityNum.begin();
         while (it != cityNum.end())
         {
             if ((it->second) > 0)
             {
                 return false;
             }
+            it++;
         }
         return true;
     }
