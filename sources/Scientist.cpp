@@ -13,6 +13,10 @@ namespace pandemic
         {
             if (gameBoard.cityResearch.at(location))
             {
+                if(n == 0){
+                    gameBoard.DiscoveredCures.at(c) = true;
+                    return *this;
+                }
                 set<City> tempN;
                 int counter = 0;
                 std::set<pandemic::City>::iterator it = cards.cbegin();
@@ -20,9 +24,9 @@ namespace pandemic
                 {
                     if (pandemic::Board::cityColor.at(*it) == c)
                     {
-                        counter++;
+                        ++counter;
                         tempN.insert(*it);
-                        if (counter >= n)
+                        if (counter == n)
                         {
                             gameBoard.DiscoveredCures.at(c) = true;
                             std::set<City>::iterator it1 = tempN.cbegin();
@@ -36,6 +40,7 @@ namespace pandemic
                     }
                     it++;
                 }
+                cout << n << "ffffffffffffffffff" << endl;
                 throw runtime_error("you need n cards of the color to discover cure");
             }
             throw runtime_error("there is no research center here");

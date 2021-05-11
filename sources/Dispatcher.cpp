@@ -8,9 +8,11 @@ namespace pandemic
         {
             throw runtime_error("already at location");
         }
+        if(gameBoard.cityResearch.at(location) == true){
         location = c;
-
         return *this;
+        }
+        throw runtime_error("you need a research center in order to fly");
     }
 
     string Dispatcher::role()

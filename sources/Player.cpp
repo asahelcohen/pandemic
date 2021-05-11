@@ -54,8 +54,9 @@ namespace pandemic
 
         if (cards.find(location) != cards.end())
         {
-            location = c;
             cards.erase(location);
+            location = c;
+
         }
         else
         {
@@ -140,7 +141,6 @@ namespace pandemic
 
     Player &Player::treat(City c)
     {
-        cout << gameBoard.cityNum.at(location) << endl;
         if (gameBoard.cityNum.at(location) == 0)
         {
             throw runtime_error("there is nobody to treat here!");

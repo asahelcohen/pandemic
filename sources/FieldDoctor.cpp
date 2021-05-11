@@ -8,9 +8,9 @@ namespace pandemic
         {
             throw runtime_error("there is nobody to treat here!");
         }
-        if (pandemic::Board::cityMap.at(location).find(c) != pandemic::Board::cityMap.at(location).end())
+        if (pandemic::Board::cityMap.at(location).find(c) != pandemic::Board::cityMap.at(location).end() || location == c)
         {
-            Color temp = pandemic::Board::cityColor.at(location);
+            Color temp = pandemic::Board::cityColor.at(c);
             if (gameBoard.DiscoveredCures.at(temp))
             {
                 gameBoard.cityNum.at(c) = 0;
