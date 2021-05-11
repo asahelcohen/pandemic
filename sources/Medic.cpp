@@ -30,7 +30,7 @@ namespace pandemic
 
         if (gameBoard.cityNum.at(location) != 0)
         {
-            if(gameBoard.DiscoveredCures.at(gameBoard.cityColor.at(location)))
+            if(gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(location)))
             {
                 gameBoard.cityNum.at(location) = 0;
             }
@@ -57,7 +57,7 @@ namespace pandemic
 
         if (gameBoard.cityNum.at(location) != 0)
         {
-            if(gameBoard.DiscoveredCures.at(gameBoard.cityColor.at(location)))
+            if(gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(location)))
             {
                 gameBoard.cityNum.at(location) = 0;
             }
@@ -84,7 +84,7 @@ namespace pandemic
 
         if (gameBoard.cityNum.at(location) != 0)
         {
-            if(gameBoard.DiscoveredCures.at(gameBoard.cityColor.at(location)))
+            if(gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(location)))
             {
                 gameBoard.cityNum.at(location) = 0;
             }
@@ -110,7 +110,7 @@ namespace pandemic
 
         if (gameBoard.cityNum.at(location) != 0)
         {
-            if(gameBoard.DiscoveredCures.at(gameBoard.cityColor.at(location)))
+            if(gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(location)))
             {
                 gameBoard.cityNum.at(location) = 0;
             }

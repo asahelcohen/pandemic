@@ -8,6 +8,12 @@ namespace pandemic
         {
             throw runtime_error("there is nobody to treat there!");
         }
+
+        if (c == location)
+        {
+            Player::treat(c);
+            return *this;
+        }
         if (cards.find(c) != cards.end())
         {
             if (gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(c)))
@@ -21,22 +27,27 @@ namespace pandemic
             cards.erase(c);
             return *this;
         }
-        if (gameBoard.cityNum.at(location) != 0) 
-        {
-            if (gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(location)))
-            {
-                gameBoard.cityNum.at(location) = 0;
-            }
-            else
-            {
-                gameBoard.cityNum.at(location) -= 1;
-            }
-        }
-        else{
-            throw runtime_error("you need city card to treat!");
-        }
-
-        return *this;
+        throw runtime_error("you need city card to treat");
+        // else
+        // {
+        // if (gameBoard.cityNum.at(location) == 0)
+        // {
+        //     throw runtime_error("you need city card to treat");
+        // }
+        // else
+        // {
+        //     cout << gameBoard[location] << endl;
+        //     if (gameBoard.DiscoveredCures.at(pandemic::Board::cityColor.at(location)))
+        //     {
+        //         gameBoard.cityNum.at(c) = 0;
+        //     }
+        //     else
+        //     {
+        //         gameBoard.cityNum.at(c) -= 1;
+        //     }
+        //     return *this;
+        // }
+        // }
     }
 
     string Virologist::role()

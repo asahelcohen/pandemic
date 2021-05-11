@@ -6,7 +6,7 @@ namespace pandemic
     {
         if (!gameBoard.DiscoveredCures.at(c))
         {
-            int five = 5;
+            const int five = 5;
             set<City> tempfive;
             int counter = 0;
             std::set<pandemic::City>::iterator it = cards.begin();
